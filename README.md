@@ -23,4 +23,14 @@ We may need to set up some SSH Keys for you before you can do this. See details 
 
 Once you have the repo cloned, open the `todo-cli` folder in your command line and type `python main.py`. You should see a welcome message basic instructions. Type "Add" to add a todo item. Type "Exit" to exit when your done adding items. Thats all thats functional at the minute. You will build the rest (with my help of course!)
 
+## Using Git 
+
+As we add features to this project, we will use git to manage our changes. 
+
+We will do new changes in a "branch". And when we are done, we will merge this branch to main. This means that the main branch will always have clean working code. Don't know what this means! Don't worry, I will go over this in person. This is not manual labour involving trees and forestry work, so don't panic. 
+
+## Next
+
+I'll add more details to this README.md (and you will too) as we build this project out. 
+
 
