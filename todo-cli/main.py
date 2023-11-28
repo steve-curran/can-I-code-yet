@@ -14,7 +14,8 @@ todo_list = []
 # LOOPS
 # Sort tasks by due date
 # Add a priority to a task
-# Types
+# Add Tests
+# Add pipeline to run tests using github actions
 
 def print_welcome_message(): 
     indent = '\t' * 5
