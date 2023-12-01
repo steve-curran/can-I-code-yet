@@ -38,11 +38,11 @@ def add():
     todo_list.append(task)
 
 def remove():
-        task = input('What task would you like to remove? ')
-        if  task in todo_list: 
+    task = input('What task would you like to remove?')
+    if task in todo_list: 
             todo_list.remove(task)
             print(task + ' has been removed.')
-        else:
+    else:
             print('Sorry, could not find ' + task + ' to remove.')
             
        
