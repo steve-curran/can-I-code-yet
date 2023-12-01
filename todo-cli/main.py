@@ -37,10 +37,24 @@ def add():
     task = input('What task would you like to add? ')
     todo_list.append(task)
 
+def remove():
+    task = input('What task would you like to remove?')
+    if task in todo_list: 
+            todo_list.remove(task)
+            print(task + ' has been removed.')
+    else:
+            print('Sorry, could not find ' + task + ' to remove.')
+            
+       
+        
+        
 def main_menu():
     command = input('What would you like to do? ')
     if command == 'Add': 
         add()
+
+    if command == "Remove":
+        remove()
 
     if command == 'Exit':
         exit()
