@@ -25,6 +25,7 @@ def print_welcome_message():
     print(indent + 'Type "Add" to Add a task')
     print(indent + 'Type "Show" to Show all tasks')
     print(indent + 'Type "Remove" to Remove a task')
+    print(indent + 'Type "Complete" to complete a task')
     print(indent + 'Type "Exit" to end the program')
     print(indent + ' ' * 50)
 
@@ -52,6 +53,18 @@ def remove():
 
     print("It's not in the list.")
         
+def complete():
+    task_name = input('What task have you completed?')
+    task_status = "complete"
+    task = {
+        "name" : task_name,
+        "status": task_status
+    }
+    for task in todo_list:
+        if task["name"] == task_name:
+             todo_list.(task)
+
+            
         
 def main_menu():
     command = input('What would you like to do? ')
@@ -60,6 +73,9 @@ def main_menu():
 
     if command == "Remove":
         remove()
+
+    if command == "Complete":
+        complete()
 
     if command == 'Exit':
         exit()
