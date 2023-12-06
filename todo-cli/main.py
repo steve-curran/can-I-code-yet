@@ -34,7 +34,14 @@ def show_all_items():
         print("- " + task)
 
 def add():
-    task = input('What task would you like to add? ')
+    task_name = input('What task would you like to add? ')
+    task_status = "incomplete"
+    task = {
+         "name" : task_name ,
+         "status" : task_status
+    }
+    
+    
     todo_list.append(task)
 
 def remove():
@@ -46,7 +53,7 @@ def remove():
             print('Sorry, could not find ' + task + ' to remove.')
             
        
-        
+
         
 def main_menu():
     command = input('What would you like to do? ')
