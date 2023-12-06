@@ -41,19 +41,17 @@ def add():
          "status" : task_status
     }
     
-    
     todo_list.append(task)
 
 def remove():
-    task = input('What task would you like to remove?')
-    if task in todo_list: 
-            todo_list.remove(task)
-            print(task + ' has been removed.')
-    else:
-            print('Sorry, could not find ' + task + ' to remove.')
-            
-       
+    task_name = input('Enter the name of the task you would like to remove!')
+    for task in todo_list :
+         if task["name"] == task_name :
+              todo_list.remove(task)
+              return 
 
+    print("It's not in the list.")
+        
         
 def main_menu():
     command = input('What would you like to do? ')
