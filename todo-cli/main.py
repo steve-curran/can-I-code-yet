@@ -31,7 +31,7 @@ def print_welcome_message():
 def show_all_items():
     print('Here are all of your tasks:')
     for task in todo_list:
-        print("- " + task)
+        print("- " , task)
 
 def add():
     task_name = input('What task would you like to add? ')
