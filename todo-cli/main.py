@@ -55,14 +55,14 @@ def remove():
         
 def complete():
     task_name = input('What task have you completed?')
-    task_status = "complete"
-    task = {
-        "name" : task_name,
-        "status": task_status
-    }
+    
     for task in todo_list:
         if task["name"] == task_name:
-             todo_list.(task)
+             task["status"] = "complete"
+             print(f'Task "{task_name}" marked as complete.')
+             return
+        
+        print(f'Task"{task_name}" not found in the to-do list.')
 
             
         
