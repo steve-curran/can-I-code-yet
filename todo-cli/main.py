@@ -60,12 +60,11 @@ def complete():
         if task["name"] == task_name:
              task["status"] = "complete"
              print(f'Task "{task_name}" marked as complete.')
-             return
-        
-        print(f'Task"{task_name}" not found in the to-do list.')
+             return  
+    
+    print(f'Task"{task_name}" not found in the to-do list.')
 
             
-        
 def main_menu():
     command = input('What would you like to do? ')
     if command == 'Add': 
