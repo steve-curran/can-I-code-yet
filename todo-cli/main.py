@@ -25,29 +25,46 @@ def print_welcome_message():
     print(indent + 'Type "Add" to Add a task')
     print(indent + 'Type "Show" to Show all tasks')
     print(indent + 'Type "Remove" to Remove a task')
+    print(indent + 'Type "Complete" to complete a task')
     print(indent + 'Type "Exit" to end the program')
     print(indent + ' ' * 50)
 
 def show_all_items():
     print('Here are all of your tasks:')
     for task in todo_list:
-        print("- " + task)
+        print("- " , task)
 
 def add():
-    task = input('What task would you like to add? ')
+    task_name = input('What task would you like to add? ')
+    task_status = "incomplete"
+    task = {
+         "name" : task_name ,
+         "status" : task_status
+    }
+    
     todo_list.append(task)
 
 def remove():
-    task = input('What task would you like to remove?')
-    if task in todo_list: 
-            todo_list.remove(task)
-            print(task + ' has been removed.')
-    else:
-            print('Sorry, could not find ' + task + ' to remove.')
+    task_name = input('Enter the name of the task you would like to remove!')
+    for task in todo_list :
+         if task["name"] == task_name :
+              todo_list.remove(task)
+              return 
+
+    print("It's not in the list.")
+        
+def complete():
+    task_name = input('What task have you completed?')
+    
+    for task in todo_list:
+        if task["name"] == task_name:
+             task["status"] = "complete"
+             print(f'Task "{task_name}" marked as complete.')
+             return  
+    
+    print(f'Task"{task_name}" not found in the to-do list.')
+
             
-       
-        
-        
 def main_menu():
     command = input('What would you like to do? ')
     if command == 'Add': 
@@ -55,6 +72,9 @@ def main_menu():
 
     if command == "Remove":
         remove()
+
+    if command == "Complete":
+        complete()
 
     if command == 'Exit':
         exit()
